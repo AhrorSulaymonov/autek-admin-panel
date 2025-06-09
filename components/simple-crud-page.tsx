@@ -51,6 +51,15 @@ interface SimpleCrudPageProps {
     required?: boolean;
     placeholder?: string;
     suffix?: string;
+    pattern?: string;
+    inputMode?:
+      | "text"
+      | "decimal"
+      | "numeric"
+      | "tel"
+      | "search"
+      | "email"
+      | "url";
   }[];
   displayFields: {
     key: string;
@@ -266,6 +275,8 @@ export default function SimpleCrudPage({
                       required={field.required}
                       min={field.type === "number" ? 0 : undefined}
                       step={field.type === "number" ? 1 : undefined}
+                      pattern={field.pattern}
+                      inputMode={field.inputMode}
                     />
                   )}
                 </div>
