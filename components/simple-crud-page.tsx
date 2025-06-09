@@ -32,9 +32,22 @@ import {
 import { Label } from "@/components/ui/label";
 import { Alert, AlertDescription } from "@/components/ui/alert";
 import { Textarea } from "@/components/ui/textarea";
+import { Checkbox } from "@/components/ui/checkbox";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 import api from "@/lib/api";
 
 interface Item {
+  id: number;
+  [key: string]: any;
+}
+
+interface RelatedItem {
   id: number;
   [key: string]: any;
 }
@@ -47,7 +60,7 @@ interface SimpleCrudPageProps {
   fields: {
     key: string;
     label: string;
-    type: "text" | "number" | "textarea";
+    type: "text" | "number" | "textarea" | "select" | "checkbox";
     required?: boolean;
     placeholder?: string;
     suffix?: string;
@@ -60,11 +73,16 @@ interface SimpleCrudPageProps {
       | "search"
       | "email"
       | "url";
+    relatedEndpoint?: string;
+    valueKey?: string;
+    labelKey?: string;
   }[];
   displayFields: {
     key: string;
     label: string;
     suffix?: string;
+    format?: (value: any) => string;
+    valueKey?: string;
   }[];
 }
 
@@ -84,10 +102,27 @@ export default function SimpleCrudPage({
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");
   const [formData, setFormData] = useState<any>({});
+  const [relatedItems, setRelatedItems] = useState<{
+    [key: string]: RelatedItem[];
+  }>({});
 
   useEffect(() => {
     fetchItems();
     initializeFormData();
+
+    const fetchAllRelatedItems = async () => {
+      const relatedData: { [key: string]: RelatedItem[] } = {};
+      for (const field of fields) {
+        if (field.type === "select" && field.relatedEndpoint) {
+          relatedData[field.key] = await fetchRelatedItems(
+            field.relatedEndpoint
+          );
+        }
+      }
+      setRelatedItems(relatedData);
+    };
+
+    fetchAllRelatedItems();
   }, []);
 
   const initializeFormData = () => {
@@ -105,7 +140,7 @@ export default function SimpleCrudPage({
       console.log("API Response:", response.data);
       console.log("Setting items to:", response.data);
       setItems(response.data);
-    } catch (error) {
+    } catch (error: any) {
       console.error(`Error fetching ${itemName}s:`, error);
       if (error.response) {
         console.error("Response data:", error.response.data);
@@ -114,6 +149,16 @@ export default function SimpleCrudPage({
       setItems([]);
     } finally {
       setLoading(false);
+    }
+  };
+
+  const fetchRelatedItems = async (endpoint: string) => {
+    try {
+      const response = await api.get(endpoint);
+      return response.data;
+    } catch (error) {
+      console.error(`Error fetching related items from ${endpoint}:`, error);
+      return [];
     }
   };
 
@@ -254,6 +299,40 @@ export default function SimpleCrudPage({
                       placeholder={field.placeholder}
                       required={field.required}
                     />
+                  ) : field.type === "select" ? (
+                    <Select
+                      value={String(formData[field.key] || "")}
+                      onValueChange={(value) =>
+                        setFormData({
+                          ...formData,
+                          [field.key]: value,
+                        })
+                      }
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder={field.placeholder} />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {relatedItems[field.key]?.map((item) => (
+                          <SelectItem key={item.id} value={String(item.id)}>
+                            {item[field.labelKey || "title"]}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  ) : field.type === "checkbox" ? (
+                    <div className="flex items-center space-x-2">
+                      <Checkbox
+                        id={field.key}
+                        checked={formData[field.key] || false}
+                        onCheckedChange={(checked) =>
+                          setFormData({
+                            ...formData,
+                            [field.key]: checked,
+                          })
+                        }
+                      />
+                    </div>
                   ) : (
                     <Input
                       id={field.key}
