@@ -1,3152 +1,2788 @@
 {
-	"info": {
-		"_postman_id": "e563f0c4-de70-4624-8edc-a280d0a3403c",
-		"name": "Autek",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "39646295"
-	},
-	"item": [
-		{
-			"name": "auth",
-			"item": [
-				{
-					"name": "signupadmin",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoiYWhyb3I3QGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTg2MTUwNywiZXhwIjoxNzQxODY1MTA3fQ.CipxSmyScN4uFvus8awe9GhUiSqvxITPDAMnEZokEGA",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "first_name",
-									"value": "axi",
-									"type": "text"
-								},
-								{
-									"key": "last_name",
-									"value": "axi2",
-									"type": "text"
-								},
-								{
-									"key": "phone",
-									"value": "900081213",
-									"type": "text"
-								},
-								{
-									"key": "email",
-									"value": "ahror11@gmail.com",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "Uzbek1$t0n",
-									"type": "text"
-								},
-								{
-									"key": "confirm_password",
-									"value": "Uzbek1$t0n",
-									"type": "text"
-								},
-								{
-									"key": "is_creator",
-									"value": "true",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://3.66.28.183:3333/api/auth/signup-admin",
-							"protocol": "http",
-							"host": [
-								"3",
-								"66",
-								"28",
-								"183"
-							],
-							"port": "3333",
-							"path": [
-								"api",
-								"auth",
-								"signup-admin"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "signinadmin",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImVtYWlsIjoiYWhyb3IxMUBnbWFpbC5jb20iLCJpc19jcmVhdG9yIjp0cnVlLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDc0NzY0MjAsImV4cCI6MTc0NzQ4MDAyMH0.B_3npSU3JMBDcngX8Jj9t2bttXWsGFea92NocfNFe-s",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"email\":\"ahror11@gmail.com\",\r\n    \"password\":\"Uzbek1$t0n\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/auth/signin-admin",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"auth",
-								"signin-admin"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "signoutadmin",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/auth/signout-admin",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"auth",
-								"signout-admin"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "refreshtokenadmin",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI3OTM2NCwiZXhwIjoxNzQ5MjgyOTY0fQ.NPybm9r7rklKjybCOlj5xKuo3SW08smNC_TBipgqxwU",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"url": {
-							"raw": "http://localhost:3000/api/auth/refresh-admin",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"auth",
-								"refresh-admin"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "admins",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI3ODUxNywiZXhwIjoxNzQ5MjgyMTE3fQ.qbsoKcRKu8mGKTJtQEnJvNDhm2D-Kc6zOcW97FckEqM",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "first_name",
-									"value": "Ahror",
-									"type": "text"
-								},
-								{
-									"key": "last_name",
-									"value": "Sulaymonov",
-									"type": "text"
-								},
-								{
-									"key": "phone",
-									"value": "500082311",
-									"type": "text"
-								},
-								{
-									"key": "username",
-									"value": "AhrorSulaymonov1",
-									"type": "text"
-								},
-								{
-									"key": "email",
-									"value": "ahrorsulaymonov49@gmail.com",
-									"type": "text"
-								},
-								{
-									"key": "password",
-									"value": "Uzbek1$t0n",
-									"type": "text"
-								},
-								{
-									"key": "confirm_password",
-									"value": "Uzbek1$t0n",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/admin",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"admin"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getAll",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI3ODUxNywiZXhwIjoxNzQ5MjgyMTE3fQ.qbsoKcRKu8mGKTJtQEnJvNDhm2D-Kc6zOcW97FckEqM",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/admin",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"admin"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "updatepassword",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI3ODUxNywiZXhwIjoxNzQ5MjgyMTE3fQ.qbsoKcRKu8mGKTJtQEnJvNDhm2D-Kc6zOcW97FckEqM",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PUT",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n   \"oldPassword\":\"Uzbek1$t0nUzbek1$t0n\",\r\n   \"newPassword\":\"Uzbek1$t0n\",\r\n   \"confirmNewPassword\":\"Uzbek1$t0n\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/admin/update-password/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"admin",
-								"update-password",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "Update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI3OTM2NCwiZXhwIjoxNzQ5MjgyOTY0fQ.NPybm9r7rklKjybCOlj5xKuo3SW08smNC_TBipgqxwU",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/constitution_6887035.png"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/admin/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"admin",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI3OTM2NCwiZXhwIjoxNzQ5MjgyOTY0fQ.NPybm9r7rklKjybCOlj5xKuo3SW08smNC_TBipgqxwU",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/constitution_6887035.png"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/admin/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"admin",
-								"1"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "category",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/category",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"category"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getall",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/category",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"category"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getById",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/category/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"category",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title11",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/category/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"category",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title11",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/category/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"category",
-								"1"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "color",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Qizil\",\r\n    \"hex\": \"#FF0000\",\r\n    \"rgb\": \"rgb(255, 0, 0)\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/color",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"color"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getall",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/color",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"color"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getById",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/color/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"color",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MzYyNiwiZXhwIjoxNzQ5Mjk3MjI2fQ.8H4D6WO03LegM3d2ai9tgskkOD4YRbniwl2N9Zs1Rp8",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title11",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/color/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"color",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title11",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/color/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"color",
-								"1"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "brend",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"Apple\",\r\n    \"description\": \"Innovatsion texnologiyalar va yuqori sifatli mahsulotlar ishlab chiqaruvchisi.\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/brend",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"brend"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getall",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/brend",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"brend"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getById",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/brend/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"brend",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MzYyNiwiZXhwIjoxNzQ5Mjk3MjI2fQ.8H4D6WO03LegM3d2ai9tgskkOD4YRbniwl2N9Zs1Rp8",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "Apple",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/brend/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"brend",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MzYyNiwiZXhwIjoxNzQ5Mjk3MjI2fQ.8H4D6WO03LegM3d2ai9tgskkOD4YRbniwl2N9Zs1Rp8",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title11",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/brend/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"brend",
-								"1"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "ram",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"ram\":8\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/ram",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"ram"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getall",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/ram",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"ram"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getById",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/ram/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"ram",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "ram",
-									"value": "16",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/ram/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"ram",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title11",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/ram/3",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"ram",
-								"3"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "screen_type",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"title\":\"AMOLED\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/screen-type",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"screen-type"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getall",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/screen-type",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"screen-type"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getById",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/screen-type/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"screen-type",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "amoled",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/screen-type/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"screen-type",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title11",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/screen-type/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"screen-type",
-								"1"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "product_image",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyNzk0MCwiZXhwIjoxNzQ5MzMxNTQwfQ.4L3P6gR7blEAyH3Aj7YUqOq4zDYtWqbRUmqPjT_iNdA",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "product_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/product-image",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"product-image"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getall",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTM2NjYyOSwiZXhwIjoxNzQ5MzcwMjI5fQ.GxEY_5CbY4s-2N3OdmLNUShO5Kt84k_AVAhb_rlcE24",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/product-image?productId=1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"product-image"
-							],
-							"query": [
-								{
-									"key": "productId",
-									"value": "1"
-								}
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getById",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/product-image/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"product-image",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTM2NjYyOSwiZXhwIjoxNzQ5MzcwMjI5fQ.GxEY_5CbY4s-2N3OdmLNUShO5Kt84k_AVAhb_rlcE24",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "is_main",
-									"value": "true",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/product-image/2",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"product-image",
-								"2"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTM2NjYyOSwiZXhwIjoxNzQ5MzcwMjI5fQ.GxEY_5CbY4s-2N3OdmLNUShO5Kt84k_AVAhb_rlcE24",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title11",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/product-image/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"product-image",
-								"1"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "Product",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "Smartfon XYZ",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "Eng yangi avlod smartfoni, kuchli kamera va batareya bilan.",
-									"type": "text"
-								},
-								{
-									"key": "old_price",
-									"value": "1500000.00",
-									"type": "text"
-								},
-								{
-									"key": "price",
-									"value": "1299000.50",
-									"type": "text"
-								},
-								{
-									"key": "uzum_link",
-									"value": "https://uzum.uz/product/xyz",
-									"type": "text"
-								},
-								{
-									"key": "wifi",
-									"value": "true",
-									"type": "text"
-								},
-								{
-									"key": "bluetooth",
-									"value": "true",
-									"type": "text"
-								},
-								{
-									"key": "remote_control",
-									"value": "true",
-									"type": "text"
-								},
-								{
-									"key": "category_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "screen_diagonal_id",
-									"value": "3",
-									"type": "text"
-								},
-								{
-									"key": "brand_id",
-									"value": "3",
-									"type": "text"
-								},
-								{
-									"key": "color_id",
-									"value": "1",
-									"type": "text"
-								},
-								{
-									"key": "memory_id",
-									"value": "2",
-									"type": "text"
-								},
-								{
-									"key": "car_brand_id",
-									"value": "2",
-									"type": "text"
-								},
-								{
-									"key": "navigation_system_id",
-									"value": "2",
-									"type": "text"
-								},
-								{
-									"key": "ram_id",
-									"value": "4",
-									"type": "text"
-								},
-								{
-									"key": "screen_type_id",
-									"value": "2",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/product",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"product"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getall",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/screen-type",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"screen-type"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getById",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/screen-type/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"screen-type",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n  \"title\": \"Yangi Smartfon Model X\",\r\n  \"description\": \"Ajoyib kamera va uzoq muddatli batareyaga ega eng so'nggi avlod smartfoni.\",\r\n  \"old_price\": \"2500000.00\",\r\n  \"price\": \"2199000.99\",\r\n  \"uzum_link\": \"https://uzum.uz/product/model-x-yangi\",\r\n  \"wifi\": true,\r\n  \"bluetooth\": true,\r\n  \"remote_control\": false\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/product/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"product",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title11",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/screen-type/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"screen-type",
-								"1"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "car_brand",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"title\":\"Toyota\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/car-brand",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"car-brand"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getall",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/car-brand",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"car-brand"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getById",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/car-brand/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"car-brand",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "16",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/car-brand/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"car-brand",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title11",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/car-brand/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"car-brand",
-								"1"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "memory",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"memory\":256\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/memory",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"memory"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getall",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/memory",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"memory"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getById",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/memory/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"memory",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "memory",
-									"value": "512",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/memory/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"memory",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title11",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/memory/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"memory",
-								"1"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "screen_diagonal",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"screen_size\":32\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/screen-diagonal",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"screen-diagonal"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getall",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/screen-diagonal",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"screen-diagonal"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getById",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/screen-diagonal/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"screen-diagonal",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "screen_size",
-									"value": "16",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/screen-diagonal/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"screen-diagonal",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title11",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/screen-diagonal/2",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"screen-diagonal",
-								"2"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		},
-		{
-			"name": "navigation_system",
-			"item": [
-				{
-					"name": "add",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MzYyNiwiZXhwIjoxNzQ5Mjk3MjI2fQ.8H4D6WO03LegM3d2ai9tgskkOD4YRbniwl2N9Zs1Rp8",
-									"type": "string"
-								}
-							]
-						},
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"title\": \"GPS + GLONASS\",\r\n    \"description\": \"Global Positioning System va Global Navigation Satellite System kombinatsiyasi.\"\r\n}",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/navigation-system",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"navigation-system"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getall",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/navigation-system",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"navigation-system"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "getById",
-					"protocolProfileBehavior": {
-						"disableBodyPruning": true
-					},
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
-									"type": "string"
-								}
-							]
-						},
-						"method": "GET",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title",
-									"type": "text"
-								},
-								{
-									"key": "description",
-									"value": "description",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/titans.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/navigation-system/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"navigation-system",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "update",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MzYyNiwiZXhwIjoxNzQ5Mjk3MjI2fQ.8H4D6WO03LegM3d2ai9tgskkOD4YRbniwl2N9Zs1Rp8",
-									"type": "string"
-								}
-							]
-						},
-						"method": "PATCH",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "Apple",
-									"type": "text"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/navigation-system/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"navigation-system",
-								"1"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "delete",
-					"request": {
-						"auth": {
-							"type": "bearer",
-							"bearer": [
-								{
-									"key": "token",
-									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MzYyNiwiZXhwIjoxNzQ5Mjk3MjI2fQ.8H4D6WO03LegM3d2ai9tgskkOD4YRbniwl2N9Zs1Rp8",
-									"type": "string"
-								}
-							]
-						},
-						"method": "DELETE",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "title",
-									"value": "title11",
-									"type": "text"
-								},
-								{
-									"key": "image",
-									"type": "file",
-									"src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
-								}
-							]
-						},
-						"url": {
-							"raw": "http://localhost:3000/api/navigation-system/1",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "3000",
-							"path": [
-								"api",
-								"navigation-system",
-								"1"
-							]
-						}
-					},
-					"response": []
-				}
-			]
-		}
-	]
+  "info": {
+    "_postman_id": "e563f0c4-de70-4624-8edc-a280d0a3403c",
+    "name": "Autek",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "39646295"
+  },
+  "item": [
+    {
+      "name": "auth",
+      "item": [
+        {
+          "name": "signupadmin",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsImVtYWlsIjoiYWhyb3I3QGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0MTg2MTUwNywiZXhwIjoxNzQxODY1MTA3fQ.CipxSmyScN4uFvus8awe9GhUiSqvxITPDAMnEZokEGA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "first_name",
+                  "value": "axi",
+                  "type": "text"
+                },
+                {
+                  "key": "last_name",
+                  "value": "axi2",
+                  "type": "text"
+                },
+                {
+                  "key": "phone",
+                  "value": "900081213",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "ahror11@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "Uzbek1$t0n",
+                  "type": "text"
+                },
+                {
+                  "key": "confirm_password",
+                  "value": "Uzbek1$t0n",
+                  "type": "text"
+                },
+                {
+                  "key": "is_creator",
+                  "value": "true",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://3.120.39.1:3000/api/auth/signup-admin",
+              "protocol": "http",
+              "host": ["3", "66", "28", "183"],
+              "port": "3333",
+              "path": ["api", "auth", "signup-admin"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "signinadmin",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTUsImVtYWlsIjoiYWhyb3IxMUBnbWFpbC5jb20iLCJpc19jcmVhdG9yIjp0cnVlLCJyb2xlIjoiQURNSU4iLCJpYXQiOjE3NDc0NzY0MjAsImV4cCI6MTc0NzQ4MDAyMH0.B_3npSU3JMBDcngX8Jj9t2bttXWsGFea92NocfNFe-s",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"email\":\"ahror11@gmail.com\",\r\n    \"password\":\"Uzbek1$t0n\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/auth/signin-admin",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "auth", "signin-admin"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "signoutadmin",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/auth/signout-admin",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "auth", "signout-admin"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "refreshtokenadmin",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI3OTM2NCwiZXhwIjoxNzQ5MjgyOTY0fQ.NPybm9r7rklKjybCOlj5xKuo3SW08smNC_TBipgqxwU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:3000/api/auth/refresh-admin",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "auth", "refresh-admin"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "admins",
+      "item": [
+        {
+          "name": "add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI3ODUxNywiZXhwIjoxNzQ5MjgyMTE3fQ.qbsoKcRKu8mGKTJtQEnJvNDhm2D-Kc6zOcW97FckEqM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "first_name",
+                  "value": "Ahror",
+                  "type": "text"
+                },
+                {
+                  "key": "last_name",
+                  "value": "Sulaymonov",
+                  "type": "text"
+                },
+                {
+                  "key": "phone",
+                  "value": "500082311",
+                  "type": "text"
+                },
+                {
+                  "key": "username",
+                  "value": "AhrorSulaymonov1",
+                  "type": "text"
+                },
+                {
+                  "key": "email",
+                  "value": "ahrorsulaymonov49@gmail.com",
+                  "type": "text"
+                },
+                {
+                  "key": "password",
+                  "value": "Uzbek1$t0n",
+                  "type": "text"
+                },
+                {
+                  "key": "confirm_password",
+                  "value": "Uzbek1$t0n",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/admin",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "admin"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getAll",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI3ODUxNywiZXhwIjoxNzQ5MjgyMTE3fQ.qbsoKcRKu8mGKTJtQEnJvNDhm2D-Kc6zOcW97FckEqM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/admin",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "admin"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "updatepassword",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI3ODUxNywiZXhwIjoxNzQ5MjgyMTE3fQ.qbsoKcRKu8mGKTJtQEnJvNDhm2D-Kc6zOcW97FckEqM",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PUT",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n   \"oldPassword\":\"Uzbek1$t0nUzbek1$t0n\",\r\n   \"newPassword\":\"Uzbek1$t0n\",\r\n   \"confirmNewPassword\":\"Uzbek1$t0n\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/admin/update-password/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "admin", "update-password", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "Update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI3OTM2NCwiZXhwIjoxNzQ5MjgyOTY0fQ.NPybm9r7rklKjybCOlj5xKuo3SW08smNC_TBipgqxwU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/constitution_6887035.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/admin/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "admin", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI3OTM2NCwiZXhwIjoxNzQ5MjgyOTY0fQ.NPybm9r7rklKjybCOlj5xKuo3SW08smNC_TBipgqxwU",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/constitution_6887035.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/admin/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "admin", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "category",
+      "item": [
+        {
+          "name": "add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/category",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "category"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getall",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/category",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "category"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/category/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "category", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title11",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/category/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "category", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title11",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/category/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "category", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "color",
+      "item": [
+        {
+          "name": "add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Qizil\",\r\n    \"hex\": \"#FF0000\",\r\n    \"rgb\": \"rgb(255, 0, 0)\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/color",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "color"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getall",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/color",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "color"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/color/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "color", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MzYyNiwiZXhwIjoxNzQ5Mjk3MjI2fQ.8H4D6WO03LegM3d2ai9tgskkOD4YRbniwl2N9Zs1Rp8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title11",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/color/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "color", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title11",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/color/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "color", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "brend",
+      "item": [
+        {
+          "name": "add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"Apple\",\r\n    \"description\": \"Innovatsion texnologiyalar va yuqori sifatli mahsulotlar ishlab chiqaruvchisi.\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/brend",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "brend"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getall",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/brend",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "brend"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/brend/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "brend", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MzYyNiwiZXhwIjoxNzQ5Mjk3MjI2fQ.8H4D6WO03LegM3d2ai9tgskkOD4YRbniwl2N9Zs1Rp8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "Apple",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/brend/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "brend", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MzYyNiwiZXhwIjoxNzQ5Mjk3MjI2fQ.8H4D6WO03LegM3d2ai9tgskkOD4YRbniwl2N9Zs1Rp8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title11",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/brend/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "brend", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "ram",
+      "item": [
+        {
+          "name": "add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"ram\":8\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/ram",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "ram"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getall",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/ram",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "ram"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/ram/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "ram", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "ram",
+                  "value": "16",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/ram/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "ram", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title11",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/ram/3",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "ram", "3"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "screen_type",
+      "item": [
+        {
+          "name": "add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"AMOLED\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/screen-type",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "screen-type"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getall",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/screen-type",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "screen-type"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/screen-type/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "screen-type", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "amoled",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/screen-type/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "screen-type", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title11",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/screen-type/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "screen-type", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "product_image",
+      "item": [
+        {
+          "name": "add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyNzk0MCwiZXhwIjoxNzQ5MzMxNTQwfQ.4L3P6gR7blEAyH3Aj7YUqOq4zDYtWqbRUmqPjT_iNdA",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "product_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/product-image",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "product-image"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getall",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTM2NjYyOSwiZXhwIjoxNzQ5MzcwMjI5fQ.GxEY_5CbY4s-2N3OdmLNUShO5Kt84k_AVAhb_rlcE24",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/product-image?productId=1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "product-image"],
+              "query": [
+                {
+                  "key": "productId",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/product-image/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "product-image", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTM2NjYyOSwiZXhwIjoxNzQ5MzcwMjI5fQ.GxEY_5CbY4s-2N3OdmLNUShO5Kt84k_AVAhb_rlcE24",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "is_main",
+                  "value": "true",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/product-image/2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "product-image", "2"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTM2NjYyOSwiZXhwIjoxNzQ5MzcwMjI5fQ.GxEY_5CbY4s-2N3OdmLNUShO5Kt84k_AVAhb_rlcE24",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title11",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/product-image/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "product-image", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "Product",
+      "item": [
+        {
+          "name": "add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "Smartfon XYZ",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "Eng yangi avlod smartfoni, kuchli kamera va batareya bilan.",
+                  "type": "text"
+                },
+                {
+                  "key": "old_price",
+                  "value": "1500000.00",
+                  "type": "text"
+                },
+                {
+                  "key": "price",
+                  "value": "1299000.50",
+                  "type": "text"
+                },
+                {
+                  "key": "uzum_link",
+                  "value": "https://uzum.uz/product/xyz",
+                  "type": "text"
+                },
+                {
+                  "key": "wifi",
+                  "value": "true",
+                  "type": "text"
+                },
+                {
+                  "key": "bluetooth",
+                  "value": "true",
+                  "type": "text"
+                },
+                {
+                  "key": "remote_control",
+                  "value": "true",
+                  "type": "text"
+                },
+                {
+                  "key": "category_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "screen_diagonal_id",
+                  "value": "3",
+                  "type": "text"
+                },
+                {
+                  "key": "brand_id",
+                  "value": "3",
+                  "type": "text"
+                },
+                {
+                  "key": "color_id",
+                  "value": "1",
+                  "type": "text"
+                },
+                {
+                  "key": "memory_id",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "car_brand_id",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "navigation_system_id",
+                  "value": "2",
+                  "type": "text"
+                },
+                {
+                  "key": "ram_id",
+                  "value": "4",
+                  "type": "text"
+                },
+                {
+                  "key": "screen_type_id",
+                  "value": "2",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/product",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "product"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getall",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/screen-type",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "screen-type"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/screen-type/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "screen-type", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"title\": \"Yangi Smartfon Model X\",\r\n  \"description\": \"Ajoyib kamera va uzoq muddatli batareyaga ega eng so'nggi avlod smartfoni.\",\r\n  \"old_price\": \"2500000.00\",\r\n  \"price\": \"2199000.99\",\r\n  \"uzum_link\": \"https://uzum.uz/product/model-x-yangi\",\r\n  \"wifi\": true,\r\n  \"bluetooth\": true,\r\n  \"remote_control\": false\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/product/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "product", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title11",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/screen-type/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "screen-type", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "car_brand",
+      "item": [
+        {
+          "name": "add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\":\"Toyota\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/car-brand",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "car-brand"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getall",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/car-brand",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "car-brand"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/car-brand/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "car-brand", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "16",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/car-brand/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "car-brand", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title11",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/car-brand/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "car-brand", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "memory",
+      "item": [
+        {
+          "name": "add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"memory\":256\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/memory",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "memory"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getall",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/memory",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "memory"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/memory/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "memory", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "memory",
+                  "value": "512",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/memory/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "memory", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title11",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/memory/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "memory", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "screen_diagonal",
+      "item": [
+        {
+          "name": "add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTMyMzIyMywiZXhwIjoxNzQ5MzI2ODIzfQ.33hZMpDzac2AzjM_Wiozur8_2g6Z9k3Ajidktf5O_tg",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"screen_size\":32\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/screen-diagonal",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "screen-diagonal"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getall",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/screen-diagonal",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "screen-diagonal"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/screen-diagonal/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "screen-diagonal", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "screen_size",
+                  "value": "16",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/screen-diagonal/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "screen-diagonal", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5NzkyOSwiZXhwIjoxNzQ5MzAxNTI5fQ.p2rcETPxX9XDjKGKRitXjNlBPyr2TPHwZh-CEsnwFXI",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title11",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/screen-diagonal/2",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "screen-diagonal", "2"]
+            }
+          },
+          "response": []
+        }
+      ]
+    },
+    {
+      "name": "navigation_system",
+      "item": [
+        {
+          "name": "add",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MzYyNiwiZXhwIjoxNzQ5Mjk3MjI2fQ.8H4D6WO03LegM3d2ai9tgskkOD4YRbniwl2N9Zs1Rp8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"title\": \"GPS + GLONASS\",\r\n    \"description\": \"Global Positioning System va Global Navigation Satellite System kombinatsiyasi.\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/navigation-system",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "navigation-system"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getall",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/navigation-system",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "navigation-system"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "getById",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MTMwNCwiZXhwIjoxNzQ5Mjk0OTA0fQ.IjA27-UQPcwD5VIHGdQj3IqLOGDeftOvjwlCvCkdFv4",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "description",
+                  "value": "description",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/titans.jpg"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/navigation-system/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "navigation-system", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "update",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MzYyNiwiZXhwIjoxNzQ5Mjk3MjI2fQ.8H4D6WO03LegM3d2ai9tgskkOD4YRbniwl2N9Zs1Rp8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "PATCH",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "Apple",
+                  "type": "text"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/navigation-system/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "navigation-system", "1"]
+            }
+          },
+          "response": []
+        },
+        {
+          "name": "delete",
+          "request": {
+            "auth": {
+              "type": "bearer",
+              "bearer": [
+                {
+                  "key": "token",
+                  "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiZW1haWwiOiJhaHJvcjExQGdtYWlsLmNvbSIsImlzX2NyZWF0b3IiOnRydWUsInJvbGUiOiJBRE1JTiIsImlhdCI6MTc0OTI5MzYyNiwiZXhwIjoxNzQ5Mjk3MjI2fQ.8H4D6WO03LegM3d2ai9tgskkOD4YRbniwl2N9Zs1Rp8",
+                  "type": "string"
+                }
+              ]
+            },
+            "method": "DELETE",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "title",
+                  "value": "title11",
+                  "type": "text"
+                },
+                {
+                  "key": "image",
+                  "type": "file",
+                  "src": "/C:/Users/Ahror/Downloads/Node-js-Logo.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:3000/api/navigation-system/1",
+              "protocol": "http",
+              "host": ["localhost"],
+              "port": "3000",
+              "path": ["api", "navigation-system", "1"]
+            }
+          },
+          "response": []
+        }
+      ]
+    }
+  ]
 }

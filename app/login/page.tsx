@@ -22,7 +22,7 @@ export default function LoginPage() {
 
     try {
       const response = await fetch(
-        "http://3.66.28.183:3333/api/auth/signin-admin",
+        "http://3.120.39.1:3000/api/auth/signin-admin",
         {
           method: "POST",
           headers: {

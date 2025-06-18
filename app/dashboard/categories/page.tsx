@@ -70,7 +70,7 @@ export default function CategoriesPage() {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch("http://3.66.28.183:3333/api/category");
+      const response = await fetch("http://3.120.39.1:3000/api/category");
       const data = await response.json();
       setCategories(Array.isArray(data) ? data : []);
     } catch (error) {
@@ -105,8 +105,8 @@ export default function CategoriesPage() {
       }
 
       const url = editingCategory
-        ? `http://3.66.28.183:3333/api/category/${editingCategory.id}`
-        : "http://3.66.28.183:3333/api/category";
+        ? `http://3.120.39.1:3000/api/category/${editingCategory.id}`
+        : "http://3.120.39.1:3000/api/category";
 
       const response = await fetch(url, {
         method: editingCategory ? "PATCH" : "POST",
@@ -150,7 +150,7 @@ export default function CategoriesPage() {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `http://3.66.28.183:3333/api/category/${id}`,
+        `http://3.120.39.1:3000/api/category/${id}`,
         {
           method: "DELETE",
           headers: {

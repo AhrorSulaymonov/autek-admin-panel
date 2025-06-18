@@ -89,7 +89,7 @@ export default function AdminsPage() {
         return;
       }
 
-      const response = await fetch("http://3.66.28.183:3333/api/admin", {
+      const response = await fetch("http://3.120.39.1:3000/api/admin", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -159,8 +159,8 @@ export default function AdminsPage() {
       }
 
       const url = editingAdmin
-        ? `http://3.66.28.183:3333/api/admin/${editingAdmin.id}`
-        : "http://3.66.28.183:3333/api/admin";
+        ? `http://3.120.39.1:3000/api/admin/${editingAdmin.id}`
+        : "http://3.120.39.1:3000/api/admin";
 
       const response = await fetch(url, {
         method: editingAdmin ? "PATCH" : "POST",
@@ -219,7 +219,7 @@ export default function AdminsPage() {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://3.66.28.183:3333/api/admin/${id}`, {
+      const response = await fetch(`http://3.120.39.1:3000/api/admin/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,

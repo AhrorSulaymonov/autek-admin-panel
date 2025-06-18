@@ -379,12 +379,12 @@ export default function SimpleCrudPage({
       </div>
 
       <div className="space-y-4">
-        <Input
+            <Input
           placeholder={`Search ${itemName.toLowerCase()}s...`}
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          className="max-w-sm"
-        />
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+              className="max-w-sm"
+            />
 
         <Card>
           <CardContent className="p-0">
@@ -430,8 +430,8 @@ export default function SimpleCrudPage({
                 ))}
               </TableBody>
             </Table>
-          </CardContent>
-        </Card>
+        </CardContent>
+      </Card>
       </div>
     </div>
   );

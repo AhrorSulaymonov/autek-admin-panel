@@ -96,7 +96,7 @@ export default function ProductImagesPage() {
       }
       console.log("Fetching images for product:", productId);
       const response = await fetch(
-        `http://3.66.28.183:3333/api/product-image?productId=${productId}`,
+        `http://3.120.39.1:3000/api/product-image?productId=${productId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -126,7 +126,7 @@ export default function ProductImagesPage() {
   const fetchProducts = async () => {
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch("http://3.66.28.183:3333/api/product", {
+      const response = await fetch("http://3.120.39.1:3000/api/product", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -172,8 +172,8 @@ export default function ProductImagesPage() {
       }
 
       const url = editingImage
-        ? `http://3.66.28.183:3333/api/product-image/${editingImage.id}`
-        : "http://3.66.28.183:3333/api/product-image";
+        ? `http://3.120.39.1:3000/api/product-image/${editingImage.id}`
+        : "http://3.120.39.1:3000/api/product-image";
 
       const response = await fetch(url, {
         method: editingImage ? "PATCH" : "POST",
@@ -216,7 +216,7 @@ export default function ProductImagesPage() {
     try {
       const token = localStorage.getItem("token");
       const response = await fetch(
-        `http://3.66.28.183:3333/api/product-image/${id}`,
+        `http://3.120.39.1:3000/api/product-image/${id}`,
         {
           method: "DELETE",
           headers: {

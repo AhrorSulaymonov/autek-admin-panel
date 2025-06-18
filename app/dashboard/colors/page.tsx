@@ -69,7 +69,7 @@ export default function ColorsPage() {
 
   const fetchColors = async () => {
     try {
-      const response = await fetch("http://3.66.28.183:3333/api/color");
+      const response = await fetch("http://3.120.39.1:3000/api/color");
       const data = await response.json();
       setColors(Array.isArray(data) ? data : []);
     } catch (error) {
@@ -89,8 +89,8 @@ export default function ColorsPage() {
       const token = localStorage.getItem("token");
 
       const url = editingColor
-        ? `http://3.66.28.183:3333/api/color/${editingColor.id}`
-        : "http://3.66.28.183:3333/api/color";
+        ? `http://3.120.39.1:3000/api/color/${editingColor.id}`
+        : "http://3.120.39.1:3000/api/color";
 
       const response = await fetch(url, {
         method: editingColor ? "PATCH" : "POST",
@@ -134,7 +134,7 @@ export default function ColorsPage() {
 
     try {
       const token = localStorage.getItem("token");
-      const response = await fetch(`http://3.66.28.183:3333/api/color/${id}`, {
+      const response = await fetch(`http://3.120.39.1:3000/api/color/${id}`, {
         method: "DELETE",
         headers: {
           Authorization: `Bearer ${token}`,
